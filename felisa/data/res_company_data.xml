@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+
+    <record id="base.MXN" model="res.currency">
+        <field name="active">True</field>
+    </record>
+
+    <record id="base.main_partner" model="res.partner">
+        <field name="name">Fabricantes Feligneo S.A de C.V.</field>
+        <field name="company_type">company</field>
+        <field name="street_name">Alfonso Garzon Santibañez</field>
+        <field name="street_number">7</field>
+        <field name="street2">San Ángel</field>
+        <field name="city">Zapopan</field>
+        <field name="state_id" eval="ref('base.state_mx_jal')"/>
+        <field name="zip"></field>
+        <field name="country_id" eval="ref('base.mx')"/>
+        <field name="phone">3110 2168</field>
+        <field name="mobile">3110 2169</field>
+        <field name="email">ventas@felisa.com.mx</field>
+        <field name="website">http://www.felisa.com.mx/</field>
+        <field name="lang">es_MX</field>
+        <field name="vat">MXFFE040115MW5</field>
+        <field name="property_account_position_id" eval="ref('l10n_mx.1_account_fiscal_position_601_fr')"/>
+    </record>
+
+    <record id="base.main_company" model="res.company">
+        <field name="name">Fabricantes Feligneo S.A de C.V.</field>
+        <field name="currency_id" ref="base.MXN"/>
+        <field name="anglo_saxon_accounting" eval="1"/>
+        <field name="logo" type="base64" file="felisa/static/src/img/logo.png"/>
+    </record>
+
+    <record id="l10n_mx.1_account_fiscal_position_601_fr" model="account.fiscal.position">
+        <field name="l10n_mx_edi_code">601</field>
+    </record>
+
+</odoo>

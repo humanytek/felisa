@@ -1,14 +1,6 @@
-[submodule "felisa"]
-	path = felisa
-	url = git@git.vauxoo.com:vauxoo/felisa.git
-	branch = 11.0
 [submodule "server-tools"]
 	path = server-tools
 	url = git@github.com:Vauxoo/server-tools.git
-	branch = 11.0
-[submodule "vendor-bills"]
-	path = vendor-bills
-	url = git@git.vauxoo.com:vauxoo/vendor-bills.git
 	branch = 11.0
 [submodule "addons-vauxoo"]
 	path = addons-vauxoo
