@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+    <record model="ir.ui.view" id="view_account_journal_l10n_mx_edi_amount_authorized_diff">
+        <field name="name">view.account.journal.filter.l10n_mx_edi.amount.authorized.diff</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <data>
+            <xpath expr="//page[@name='advanced_settings']" position="inside">
+                <group name="amount_authorized" attrs="{'invisible': [('type', 'not in', ['sale', 'purchase'])]}" groups="base.group_no_one">
+                    <field name="l10n_mx_edi_amount_authorized_diff"/>
+                </group>
+            </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>
