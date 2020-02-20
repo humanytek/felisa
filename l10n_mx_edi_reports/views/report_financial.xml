@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- general ledger report templates -->
+    <template id="new_line_template_general_ledger_report" inherit_id="account_reports.line_template" primary="True">
+        <xpath expr="//ul[hasclass('o_account_reports_domain_dropdown')]/li[last()]" position="before">
+            <li t-if="line['caret_options'] != 'account.tax'" role="presentation"><a role="menuitem" tabindex="-1" t-att-data-id="line['id']" action="open_document">View Journal Entry</a></li>
+        </xpath>
+    </template>
+    <template id="template_general_ledger_report" inherit_id="account_reports.main_template" primary="True">
+        <xpath expr="//tbody" position="replace">
+            <t t-if="lines.get('lines')">
+                <t t-call="l10n_mx_edi_reports.new_line_template_general_ledger_report" />
+            </t>
+        </xpath>
+    </template>
+</odoo>
