@@ -20,3 +20,8 @@
 	path = humanytek-team/l10n_mx_edi_bank
 	url = git@github.com:humanytek-team/l10n_mx_edi_bank.git
 	branch = 13.0
+
+[submodule "humanytek-team/company_country"]
+	path = humanytek-team/company_country
+	url = git@github.com:humanytek-team/company_country.git
+	branch = 13.0
