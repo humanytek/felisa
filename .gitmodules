@@ -15,3 +15,8 @@
 	path = humanytek-team/stock_mts_mto_rule
 	url = git@github.com:humanytek-team/stock_mts_mto_rule.git
 	branch = 13.0
+
+[submodule "humanytek-team/l10n_mx_edi_bank"]
+	path = humanytek-team/l10n_mx_edi_bank
+	url = git@github.com:humanytek-team/l10n_mx_edi_bank.git
+	branch = 13.0
