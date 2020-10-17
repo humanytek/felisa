@@ -1,0 +1,8 @@
+[submodule "mexico"]
+	path = mexico
+	url = git@git.vauxoo.com:vauxoo/mexico.git
+	branch = 13.0
+[submodule "vendor-bills"]
+	path = vendor-bills
+	url = git@git.vauxoo.com:vauxoo/vendor-bills.git
+	branch = 13.0
