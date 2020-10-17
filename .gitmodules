@@ -10,3 +10,8 @@
 	path = stock-logistics-warehouse
 	url = git@github.com:Vauxoo/stock-logistics-warehouse.git
 	branch = 11.0
+
+[submodule "humanytek-team/stock_mts_mto_rule"]
+	path = humanytek-team/stock_mts_mto_rule
+	url = git@github.com:humanytek-team/stock_mts_mto_rule.git
+	branch = 13.0
