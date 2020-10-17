@@ -6,31 +6,17 @@
         <field name="arch" type="xml">
             <form class="form-xml">
                 <group class="wizard_fields">
-                    <group class="col-6">
+                    <group>
                         <field name="journal_id" options="{'no_create': True}"/>
                         <field name="account_id" options="{'no_create': True}"/>
                     </group>
-                    <group class="col-6">
-                        <field name="toggle_mode"/>
-                    </group>
-                    <field name="attachment_ids" nolabel="1" attrs="{'invisible': [('toggle_mode', '=', False)]}" domain="[('mimetype', '=', 'application/xml'), ('datas_fname', 'ilike', '.xml'), ('res_model', '=', False), ('res_id', '=', False)]">
-                        <tree>
-                            <field name="datas_fname"/>
-                            <field name="name"/>
-                            <field name="create_date"/>
-                        </tree>
-                    </field>
                     <group groups="l10n_mx_edi_vendor_bills.allow_force_invoice_generation">
                         <field name="omit_cfdi_related"/>
                     </group>
                 </group>
                 <br/><br/><br/>
-                <field nolabel="1" name="dragndrop" widget="attach_xmls_wizard_widget" string="Attach Supplier XML's" attrs="{'invisible': [('toggle_mode', '=', True)]}"/>
-                <footer class="xml-footer" attrs="{'invisible': [('toggle_mode', '=', True)]}"/>
-                <footer attrs="{'invisible': [('toggle_mode', '=', False)]}">
-                    <button name="load_attachments" type="object" string="Load" class="oe_highlight"/>
-                    <button special="cancel" string="Cancel"/>
-                </footer>
+                <field nolabel="1" name="dragndrop" widget="attach_xmls_wizard_widget" string="Attach Supplier XML's"/>
+                <footer class="xml-footer"/>
             </form>
         </field>
     </record>

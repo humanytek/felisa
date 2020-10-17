@@ -4,7 +4,7 @@
 {
     'name': 'Import Supplier Invoice from XML',
     'summary': 'Create multiple Invoices from XML',
-    'version': '11.0.1.0.0',
+    'version': '13.0.1.0.1',
     'category': 'Localization/Mexico',
     'author': 'Vauxoo,Jarsa',
     'website': 'https://www.vauxoo.com',
@@ -16,9 +16,8 @@
         'security/groups.xml',
         'views/assets.xml',
         'views/account_invoice_view.xml',
-        'views/account_view.xml',
         'wizards/attach_xmls_wizard_view.xml',
-        'data/res_partner_category.xml',
+        'views/res_config_settings_views.xml',
     ],
     'demo': [
         'demo/ir_attachment.xml',

@@ -21,7 +21,6 @@ class IrAttachment(models.Model):
             values.update(description)
         return super().create(values)
 
-    @api.multi
     def write(self, values):
         no_mx_rec = self
         for rec in self:
@@ -87,7 +86,7 @@ class IrAttachment(models.Model):
     @api.model
     def _prepare_description_attachment(self, xml):
         # TODO: Check if we can avoid use enterprise.
-        cfdi = self.env['account.invoice'].l10n_mx_edi_get_tfd_etree(xml)
+        cfdi = self.env['account.move'].l10n_mx_edi_get_tfd_etree(xml)
         data = {
             'date': xml.get('Fecha', ' ').replace('T', ' '),
             'number': xml.get('Folio', ''),

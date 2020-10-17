@@ -56,7 +56,6 @@ class TestIrAttachment(TransactionCase):
             attachments |= self.attachment.create({
                 'name': xml_file,
                 'datas': xml,
-                'datas_fname': xml_file,
             })
         return attachments
 
@@ -99,7 +98,6 @@ class TestIrAttachment(TransactionCase):
         attachment = self.attachment.create({
             'name': file_name,
             'datas': xml_b64,
-            'datas_fname': file_name,
         })
         self.assertFalse(attachment.description)
 
